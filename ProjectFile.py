@@ -501,11 +501,11 @@ SB = 0
 while SB == 0:
     # 프레임마다 초기화
     isBoundary = False
-    # 4-1. FPS 설정
+    # 4.1. 프레임 설정 FPS
     clock.tick(FPS)
     screen.fill((50,50,50))
     
-    # 4-1 배경 그리기
+    # 4.1 배경 그리기
     screen.blit(bg, (0,0),(bgX,bgY,size[0],700))
     # 4.1.1 - 플레이어 & 적 애니메이션
     playerRect = pygame.Rect(playerpos[0],playerpos[1],25,35)
@@ -1129,9 +1129,7 @@ while SB == 0:
     screen.blit(text_Title, [200, 200])
     pygame.display.flip()
     for event in pygame.event.get():
-        # check if the event is the X button 
         if event.type==pygame.QUIT:
-            # if it is quit the game
             SB = 1
             pygame.quit() 
             exit(0) 
